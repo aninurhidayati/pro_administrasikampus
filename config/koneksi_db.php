@@ -1,6 +1,6 @@
 <?php
 $servername = "127.0.0.1";
-$database = "db_latihan";
+$database = "db_admkampus";
 $user_db = "root";
 $pass_db = "";
 
