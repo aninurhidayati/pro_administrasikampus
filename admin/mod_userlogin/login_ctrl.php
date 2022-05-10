@@ -14,7 +14,7 @@ if (isset($_GET['act']) && ($_GET['act'] == "add")) {
 } else if (isset($_GET['act']) && ($_GET['act'] == "save")) {
     $nama = $_POST['nama'];
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
     if (isset($_POST['isactive'])) {
         $aktif = 1;
     } else {
@@ -28,7 +28,7 @@ if (isset($_GET['act']) && ($_GET['act'] == "add")) {
     $id = $_POST['id_login'];
     $up_nama = $_POST['nama'];
     $up_username = $_POST['username'];
-    $up_password = $_POST['password'];
+    $up_password = md5($_POST['password']);
     if (isset($_POST['isactive'])) {
         $aktif = 1;
     } else {

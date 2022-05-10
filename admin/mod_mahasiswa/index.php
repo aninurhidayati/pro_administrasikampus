@@ -30,7 +30,7 @@ if (!isset($_GET['act'])) {
                     <td><?= $d["jk_mhs"]; ?></td>
                     <td><?= $d["jurusan_mhs"]; ?></td>
                     <td>
-                        <a href="?modul=mod_mahasiswa&act=edit&id=<?= $d["id_mhs"]; ?>" class="btn btn-xs btn-primary"><i class="bi bi-pencil-square"></i> Edit</a>
+                        <a href="?modul=mod_mahasiswa&act=edit&id=<?= $d["id_mhs"]; ?>" class="btn btn-xs btn-primary mb-2"><i class="bi bi-pencil-square"></i> Edit</a>
                         <a href="?modul=mod_mahasiswa&act=delete&id=<?= $d["id_mhs"]; ?>" class="btn btn-xs btn-danger"><i class="bi bi-trash"></i> Delete</a>
                     </td>
                 </tr>
@@ -68,7 +68,10 @@ if (!isset($_GET['act'])) {
                     <div class="mb-3 row">
                         <label for="jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="jeniskelamin" name="jeniskelamin">
+                            <select class="form-select" name="jeniskelamin" id="jeniskelamin">
+                                <option value="Laki Laki">Laki Laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -128,7 +131,10 @@ if (!isset($_GET['act'])) {
                         <div class="mb-3 row">
                             <label for="jeniskelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="jeniskelamin" name="jeniskelamin" value="<?= $q['jk_mhs']; ?>">
+                                <select class="form-select" name="jeniskelamin" id="jeniskelamin">
+                                    <option value="Laki Laki">Laki Laki</option>
+                                    <option value="Perempuan">Perempuan</option>
+                                </select>
                             </div>
                         </div>
                         <div class="mb-3 row">

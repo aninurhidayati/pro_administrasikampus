@@ -56,7 +56,7 @@ if (!isset($_GET['act'])) {
                     <div class="mb-3 row">
                         <label for="password" class="col-sm-2 col-form-label">Password</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="password" name="password">
+                            <input type="password" class="form-control" id="password" name="password">
                         </div>
                     </div>
                     <div class="mb-3 row">
