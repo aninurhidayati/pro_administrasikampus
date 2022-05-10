@@ -20,9 +20,15 @@ require_once("../config/config.php");
             background-color: gray;
         }
     </style>
+<<<<<<< HEAD
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #007da5"> 
         <div class="container-fluid" style="color: lightgray;">
             <a class="navbar-brand" href="#">Admin</a>
+=======
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Administrasi Kampus</a>
+>>>>>>> 04778952b3c3a25898dc0d9f1ef5c46d6008b29c
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

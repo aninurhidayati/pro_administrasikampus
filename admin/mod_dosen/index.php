@@ -58,7 +58,12 @@ if (!isset($_GET['act'])) {
                     <div class="mb-3 row">
                         <label for="jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+                            <select class="form-select" name="jenis_kelamin" id="jenis_kelamin">
+                                <option selected disabled>Jenis Kelamin</option>
+                                <option value="Laki Laki">Laki Laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                            <!-- <input type="text" class="form-control" id="jenis_kelamin" name="jenis_kelamin"> -->
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -106,7 +111,11 @@ if (!isset($_GET['act'])) {
                         <div class="mb-3 row">
                             <label for="jeniskelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="jeniskelamin" name="jeniskelamin" value="<?= $q['jenis_kelamin']; ?>">
+                                <select class="form-select" name="jenis_kelamin" id="jenis_kelamin">
+                                    <!-- <option selected disabled>Jenis Kelamin</option> -->
+                                    <option value="Laki Laki" <?= $q['jenis_kelamin'] == "Laki Laki" ? "selected" : "" ?>>Laki Laki</option>
+                                    <option value="Perempuan" <?= $q['jenis_kelamin'] == "Perempuan" ? "selected" : "" ?>>Perempuan</option>
+                                </select>
                             </div>
                         </div>
                         <div class="mb-3 row">

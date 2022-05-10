@@ -1,31 +1,31 @@
 <?php
-include 'login_ctrl.php';
+include 'menu_ctrl.php';
 if (!isset($_GET['act'])) {
 ?>
     <div class="container pt-1">
-        <a href="?modul=mod_userlogin&act=add" class="btn btn-primary mb-2">Tambah Data</a>
+        <a href="?modul=mod_menu&act=add" class="btn btn-primary mb-2">Tambah Data</a>
         <table class="table">
             <thead class="bg-dark text-white">
                 <tr>
-                    <th>Id Login</th>
-                    <th>Nama</th>
-                    <th>Username</th>
-                    <th>Password</th>
+                    <th>Id Menu</th>
+                    <th>Nama Menu</th>
+                    <th>Link</th>
+                    <th>Is Active</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <?php
-            $data = mysqli_query($koneksi, "SELECT * FROM mst_login");
+            $data = mysqli_query($koneksi, "SELECT * FROM mst_menu");
             foreach ($data as $d) :
             ?>
                 <tr>
-                    <td><?= $d["id_login"]; ?></td>
-                    <td><?= $d["nama"]; ?></td>
-                    <td><?= $d["username"]; ?></td>
-                    <td><?= $d["password"]; ?></td>
+                    <td><?= $d["id_menu"]; ?></td>
+                    <td><?= $d["nama_menu"]; ?></td>
+                    <td><?= $d["link"]; ?></td>
+                    <td><?= $d["isactive"]; ?></td>
                     <td>
-                        <a href="?modul=mod_userlogin&act=edit&id=<?= $d["id_login"]; ?>" class="btn btn-xs btn-primary"><i class="bi bi-pencil-square"></i> Edit</a>
-                        <a href="?modul=mod_userlogin&act=delete&id=<?= $d["id_login"]; ?>" class="btn btn-xs btn-danger"><i class="bi bi-trash"></i> Delete</a>
+                        <a href="?modul=mod_menu&act=edit&id=<?= $d["id_menu"]; ?>" class="btn btn-xs btn-primary"><i class="bi bi-pencil-square"></i> Edit</a>
+                        <a href="?modul=mod_menu&act=delete&id=<?= $d["id_menu"]; ?>" class="btn btn-xs btn-danger"><i class="bi bi-trash"></i> Delete</a>
                     </td>
                 </tr>
             <?php
@@ -40,23 +40,17 @@ if (!isset($_GET['act'])) {
         <h3 class="mb-4"><?= $judul; ?></h3>
         <div class="row">
             <div class="col">
-                <form action="mod_userlogin/login_ctrl.php?modul=mod_userlogin&act=save" method="POST">
+                <form action="mod_menu/menu_ctrl.php?modul=mod_menu&act=save" method="POST">
                     <div class="mb-3 row">
-                        <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+                        <label for="nama_menu" class="col-sm-2 col-form-label">Nama Menu</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="nama" name="nama">
+                            <input type="text" class="form-control" id="nama_menu" name="nama_menu">
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="username" class="col-sm-2 col-form-label">Username</label>
+                        <label for="link" class="col-sm-2 col-form-label">Link</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="username" name="username">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="password" class="col-sm-2 col-form-label">Password</label>
-                        <div class="col-sm-6">
-                            <input type="password" class="form-control" id="password" name="password">
+                            <input type="text" class="form-control" id="link" name="link">
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -70,7 +64,7 @@ if (!isset($_GET['act'])) {
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-10">
-                            <a href="?modul=mod_userlogin" type="cancel" class="btn btn-secondary"><i class="bi bi-box-arrow-left"></i> Kembali</a>
+                            <a href="?modul=mod_menu" type="cancel" class="btn btn-secondary"><i class="bi bi-box-arrow-left"></i> Kembali</a>
                             <button type="cancel" class="btn btn-danger"><i class="bi bi-x-square"></i> Reset</button>
                             <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Submit</button>
                         </div>
@@ -82,31 +76,25 @@ if (!isset($_GET['act'])) {
     <?php
 } else if (isset($_GET['act']) && ($_GET['act'] == "edit")) {
     $id = $_GET['id'];
-    $qry_edit = mysqli_query($koneksi, "SELECT * FROM mst_login WHERE id_login='$id'");
+    $qry_edit = mysqli_query($koneksi, "SELECT * FROM mst_menu WHERE id_menu='$id'");
     foreach ($qry_edit as $q) :
     ?>
         <div class="container mt-3">
             <h3 class="mb-4"><?= $judul1; ?></h3>
             <div class="row">
                 <div class="col">
-                    <form action="mod_userlogin/login_ctrl.php?modul=mod_userlogin&act=update" method="POST">
+                    <form action="mod_menu/menu_ctrl.php?modul=mod_menu&act=update" method="POST">
                         <div class="mb-3 row">
-                            <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+                            <label for="nama_menu" class="col-sm-2 col-form-label">Nama Menu</label>
                             <div class="col-sm-6">
-                                <input type="hidden" class="form-control" name="id_login" value="<?= $q['id_login']; ?>">
-                                <input type="text" class="form-control" id="nama" name="nama" value="<?= $q['nama']; ?>">
+                                <input type="hidden" class="form-control" name="id_menu" value="<?= $q['id_menu']; ?>">
+                                <input type="text" class="form-control" id="nama_menu" name="nama_menu" value="<?= $q['nama_menu']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="username" class="col-sm-2 col-form-label">Username</label>
+                            <label for="link" class="col-sm-2 col-form-label">Link</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="username" name="username" value="<?= $q['username']; ?>">
-                            </div>
-                        </div>
-                        <div class="mb-3 row">
-                            <label for="password" class="col-sm-2 col-form-label">Password</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" id="password" name="password" value="<?= $q['password']; ?>">
+                                <input type="text" class="form-control" id="link" name="link" value="<?= $q['link']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -120,7 +108,7 @@ if (!isset($_GET['act'])) {
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-10">
-                                <a href="?modul=mod_userlogin" type="cancel" class="btn btn-secondary"><i class="bi bi-box-arrow-left"></i> Kembali</a>
+                                <a href="?modul=mod_menu" type="cancel" class="btn btn-secondary"><i class="bi bi-box-arrow-left"></i> Kembali</a>
                                 <button type="cancel" class="btn btn-danger"><i class="bi bi-x-square"></i> Reset</button>
                                 <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Simpan</button>
                             </div>

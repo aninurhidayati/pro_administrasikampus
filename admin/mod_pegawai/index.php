@@ -24,7 +24,7 @@ if (!isset($_GET['act'])) {
                     <td><?= $d["nama_pegawai"]; ?></td>
                     <td><?= $d["alamat"]; ?></td>
                     <td><?= $d["jenis_kelamin"]; ?></td>
-                    <td><?= $d["tgl_lahir"]; ?></td>
+                    <td><?= date("d-m-Y", strtotime($d['tgl_lahir'])); ?></td>
                     <td>
                         <a href="?modul=mod_pegawai&act=edit&id=<?= $d["id_pegawai"]; ?>" class="btn btn-xs btn-primary"><i class="bi bi-pencil-square"></i> Edit</a>
                         <a href="?modul=mod_pegawai&act=delete&id=<?= $d["id_pegawai"]; ?>" class="btn btn-xs btn-danger"><i class="bi bi-trash"></i> Delete</a>
@@ -58,7 +58,12 @@ if (!isset($_GET['act'])) {
                     <div class="mb-3 row">
                         <label for="jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+                            <select class="form-select" name="jenis_kelamin" id="jenis_kelamin">
+                                <option selected disabled>Jenis Kelamin</option>
+                                <option value="Laki Laki">Laki Laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                            <!-- <input type="text" class="form-control" id="jenis_kelamin" name="jenis_kelamin"> -->
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -94,7 +99,7 @@ if (!isset($_GET['act'])) {
                             <label for="namapegawai" class="col-sm-2 col-form-label">Nama Pegawai</label>
                             <div class="col-sm-6">
                                 <input type="hidden" class="form-control" name="id_pegawai" value="<?= $q['id_pegawai']; ?>">
-                                <input type="text" class="form-control" id="namapegawai" name="namapegawai" value="<?= $q['nama_pegawai']; ?>">
+                                <input type="text" class="form-control" id="namapegawai" name="nama_pegawai" value="<?= $q['nama_pegawai']; ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -106,7 +111,12 @@ if (!isset($_GET['act'])) {
                         <div class="mb-3 row">
                             <label for="jeniskelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="jeniskelamin" name="jeniskelamin" value="<?= $q['jenis_kelamin']; ?>">
+                                <select class="form-select" name="jenis_kelamin" id="jenis_kelamin">
+                                    <!-- <option selected disabled>Jenis Kelamin</option> -->
+                                    <option value="Laki Laki" <?= $q['jenis_kelamin'] == "Laki Laki" ? "selected" : "" ?>>Laki Laki</option>
+                                    <option value="Perempuan" <?= $q['jenis_kelamin'] == "Perempuan" ? "selected" : "" ?>>Perempuan</option>
+                                </select>
+                                <!-- <input type="text" class="form-control" id="jeniskelamin" name="jenis_kelamin" value="<?= $q['jenis_kelamin']; ?>"> -->
                             </div>
                         </div>
                         <div class="mb-3 row">
