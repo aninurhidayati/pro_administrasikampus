@@ -16,12 +16,7 @@ if (isset($_GET['act']) && ($_GET['act'] == "add")) {
     $nim = $_POST['nimmahasiswa'];
     $alamat = $_POST['alamat'];
     $tgl_lahir = $_POST['tgl_lahir'];
-    if(isset($_POST['jeniskelamin'])){
-		$jk = "laki-laki";
-	}
-	else{
-		$jk = "perempuan";
-	}
+    $jk = $_POST['jenis_kelamin'];
     $jurusan = $_POST['jurusan'];
     mysqli_query($koneksi, "INSERT INTO mst_mahasiswa (nim_mhs,nama_mhs,ttl_mhs,alamat_mhs,jk_mhs,jurusan_mhs) VALUES ('$nim','$nama','$tgl_lahir','$alamat','$jk','$jurusan')");
     header("Location: ../home.php?modul=mod_mahasiswa");
@@ -31,12 +26,7 @@ if (isset($_GET['act']) && ($_GET['act'] == "add")) {
     $up_nama = $_POST['namamahasiswa'];
     $up_alamat = $_POST['alamat'];
     $up_tgl_lahir = $_POST['tgl_lahir'];
-    if(isset($_POST['jeniskelamin'])){
-		$jk = "laki-laki";
-	}
-	else{
-		$jk = "perempuan";
-	}
+    $up_jk = $_POST['jenis_kelamin'];
     $up_jurusan = $_POST['jurusan'];
     mysqli_query($koneksi, "UPDATE mst_mahasiswa SET nim_mhs='$up_nim',nama_mhs='$up_nama',alamat_mhs='$up_alamat',jk_mhs='$up_jk',ttl_mhs='$up_tgl_lahir',jurusan_mhs='$up_jurusan' WHERE id_mhs='$id'");
 
@@ -46,5 +36,5 @@ if (isset($_GET['act']) && ($_GET['act'] == "add")) {
 
     mysqli_query($koneksi, "DELETE FROM mst_mahasiswa WHERE id_mhs='$id'");
 
-    header("Location: home.php?modul=mod_mhs");
+    header("Location: home.php?modul=mod_mahasiswa");
 }

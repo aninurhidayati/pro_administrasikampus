@@ -65,63 +65,41 @@ if (!isset($_GET['act'])) {
                             <input type="text" class="form-control" id="alamat" name="alamat">
                         </div>
                     </div>
-                <div class="mb-3 row">
-                    <div class="col-md-2">
-                        <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
-                    </div>
-                        <div class="col-md-6">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="jeniskelamin" id="jeniskelamin" value="laki-laki">
-                                <label class="form-check-label" for="jeniskelamin">
-                                    Laki-Laki
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="jeniskelamin" id="jeniskelamin" value="perempuan">
-                                <label class="form-check-label" for="jeniskelamin">
-                                    Perempuan
-                                </label>
-                            </div>
-                        </div>
-                </div>
-                    <!-- <div class="mb-3 row">
+                    <div class="mb-3 row">
                         <label for="jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                         <div class="col-sm-6">
-<<<<<<< HEAD
-                            <select class="form-select" name="jeniskelamin" id="jeniskelamin">
+                            <select class="form-select" name="jenis_kelamin" id="jenis_kelamin">
+                                <option selected disabled>Jenis Kelamin</option>
                                 <option value="Laki Laki">Laki Laki</option>
                                 <option value="Perempuan">Perempuan</option>
                             </select>
-                        </div>
-=======
-                            <input type="radio" class="form-control" id="jeniskelamin" name="jeniskelamin" value="Pria">Pria
-                            
-                        </div> -->
->>>>>>> b86a0d49a3ac4eba80eeb870022bdfc16a653a41
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="tgl_lahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
-                        <div class="col-sm-6">
-                            <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir">
+                            <!-- <input type="text" class="form-control" id="jenis_kelamin" name="jenis_kelamin"> -->
                         </div>
                     </div>
-                    <div class="mb-3 row">
-                        <label for="jurusan" class="col-sm-2 col-form-label">Jurusan</label>
-                        <div class="col-sm-6">
-                            <input type="text" class="form-control" id="jurusan" name="jurusan">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-10">
-                            <a href="?modul=mod_mahasiswa" type="cancel" class="btn btn-secondary"><i class="bi bi-box-arrow-left"></i> Kembali</a>
-                            <button type="cancel" class="btn btn-danger"><i class="bi bi-x-square"></i> Reset</button>
-                            <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Submit</button>
-                        </div>
-                    </div>
-                </form>
             </div>
+            <div class="mb-3 row">
+                <label for="tgl_lahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                <div class="col-sm-6">
+                    <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="jurusan" class="col-sm-2 col-form-label">Jurusan</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="jurusan" name="jurusan">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-10">
+                    <a href="?modul=mod_mahasiswa" type="cancel" class="btn btn-secondary"><i class="bi bi-box-arrow-left"></i> Kembali</a>
+                    <button type="cancel" class="btn btn-danger"><i class="bi bi-x-square"></i> Reset</button>
+                    <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i> Submit</button>
+                </div>
+            </div>
+            </form>
         </div>
+    </div>
     </div>
     <?php
 } else if (isset($_GET['act']) && ($_GET['act'] == "edit")) {
@@ -154,33 +132,16 @@ if (!isset($_GET['act'])) {
                             </div>
                         </div>
                         <div class="mb-3 row">
-                    <div class="col-md-2">
-                        <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
-                    </div>
-                        <div class="col-md-6">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="jeniskelamin" id="jeniskelamin" value="laki-laki">
-                                <label class="form-check-label" for="jeniskelamin" value="<?= $q['jk_mhs'];?>">
-                                    Laki-Laki
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="jeniskelamin" id="jeniskelamin" value="perempuan">
-                                <label class="form-check-label" for="jeniskelamin" value="<?= $q['jk_mhs'];?>">
-                                    Perempuan
-                                </label>
-                            </div>
-                        </div>
-                </div>
-                        <!-- <div class="mb-3 row">
                             <label for="jeniskelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                             <div class="col-sm-6">
-                                <select class="form-select" name="jeniskelamin" id="jeniskelamin">
-                                    <option value="Laki Laki">Laki Laki</option>
-                                    <option value="Perempuan">Perempuan</option>
+                                <select class="form-select" name="jenis_kelamin" id="jenis_kelamin">
+                                    <!-- <option selected disabled>Jenis Kelamin</option> -->
+                                    <option value="Laki Laki" <?= $q['jk_mhs'] == "Laki Laki" ? "selected" : "" ?>>Laki Laki</option>
+                                    <option value="Perempuan" <?= $q['jk_mhs'] == "Perempuan" ? "selected" : "" ?>>Perempuan</option>
                                 </select>
+                                <!-- <input type="text" class="form-control" id="jeniskelamin" name="jenis_kelamin" value="<?= $q['jenis_kelamin']; ?>"> -->
                             </div>
-                        </div> -->
+                        </div>
                         <div class="mb-3 row">
                             <label for="tgl_lahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                             <div class="col-sm-6">
