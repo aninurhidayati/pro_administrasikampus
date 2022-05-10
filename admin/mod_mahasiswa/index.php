@@ -65,11 +65,31 @@ if (!isset($_GET['act'])) {
                             <input type="text" class="form-control" id="alamat" name="alamat">
                         </div>
                     </div>
-                    <div class="mb-3 row">
+                <div class="mb-3 row">
+                    <div class="col-md-2">
+                        <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
+                    </div>
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="jeniskelamin" id="jeniskelamin" value="laki-laki">
+                                <label class="form-check-label" for="jeniskelamin">
+                                    Laki-Laki
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="jeniskelamin" id="jeniskelamin" value="perempuan">
+                                <label class="form-check-label" for="jeniskelamin">
+                                    Perempuan
+                                </label>
+                            </div>
+                        </div>
+                </div>
+                    <!-- <div class="mb-3 row">
                         <label for="jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="jeniskelamin" name="jeniskelamin">
-                        </div>
+                            <input type="radio" class="form-control" id="jeniskelamin" name="jeniskelamin" value="Pria">Pria
+                            
+                        </div> -->
                     </div>
                     <div class="mb-3 row">
                         <label for="tgl_lahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
@@ -126,11 +146,30 @@ if (!isset($_GET['act'])) {
                             </div>
                         </div>
                         <div class="mb-3 row">
+                    <div class="col-md-2">
+                        <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
+                    </div>
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="jeniskelamin" id="jeniskelamin" value="laki-laki">
+                                <label class="form-check-label" for="jeniskelamin" value="<?= $q['jk_mhs'];?>">
+                                    Laki-Laki
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="jeniskelamin" id="jeniskelamin" value="perempuan">
+                                <label class="form-check-label" for="jeniskelamin" value="<?= $q['jk_mhs'];?>">
+                                    Perempuan
+                                </label>
+                            </div>
+                        </div>
+                </div>
+                        <!-- <div class="mb-3 row">
                             <label for="jeniskelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                             <div class="col-sm-6">
                                 <input type="text" class="form-control" id="jeniskelamin" name="jeniskelamin" value="<?= $q['jk_mhs']; ?>">
                             </div>
-                        </div>
+                        </div> -->
                         <div class="mb-3 row">
                             <label for="tgl_lahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                             <div class="col-sm-6">
