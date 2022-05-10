@@ -3,9 +3,9 @@ include 'pegawai_ctrl.php';
 if (!isset($_GET['act'])) {
 ?>
     <div class="container pt-1">
-        <a href="?modul=mod_pegawai&act=add" class="btn btn-primary mb-2">Tambah Data</a>
-        <table class="table">
-            <thead class="bg-dark text-white">
+        <a href="?modul=mod_pegawai&act=add" class="btn btn-outline-dark mb-2 text"><i class="bi bi-plus-square-fill"></i> Tambah Data</a>
+        <table class="table table-bordered">
+            <thead class="text-white"style="background-color: #007da5";>
                 <tr>
                     <th>Id Pegawai</th>
                     <th>Nama Pegawai</th>

@@ -20,7 +20,7 @@ require_once("../config/config.php");
             background-color: gray;
         }
     </style>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #007da5;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Administrasi Kampus</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,6 +33,13 @@ require_once("../config/config.php");
                     </li>
                 </ul>
             </div>
+            <div class="d-flex">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">logout</a>
+                    </li>
+                </ul>
+      </div>
         </div>
     </nav>
     <div class="container-fluid mt-2">

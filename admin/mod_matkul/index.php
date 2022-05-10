@@ -3,9 +3,9 @@ include 'matkul_ctrl.php';
 if (!isset($_GET['act'])) {
 ?>
     <div class="container pt-1">
-        <a href="?modul=mod_matkul&act=add" class="btn btn-primary mb-2">Tambah Data</a>
-        <table class="table">
-            <thead class="bg-dark text-white">
+        <a href="?modul=mod_matkul&act=add" class="btn btn-outline-dark mb-2 text"><i class="bi bi-plus-square-fill"></i> Tambah Data</a>
+        <table class="table table-bordered">
+            <thead class="text-white" style="background-color: #007da5";>
                 <tr>
                     <th>Id Matkul</th>
                     <th>Nama Mata Kuliah</th>

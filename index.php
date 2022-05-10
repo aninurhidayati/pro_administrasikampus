@@ -15,11 +15,11 @@ require_once("config/config.php");
 </head>
 
 <body style="background-image: url('assets/img_bg/1.jpg'); background-size: 1366px 768px;" >
-    <div class="container d-flex justify-content-center mt-5 pt-5">
-        <form class="bg-dark p-5" method="POST" action="ceklogin.php">
+    <div class="container d-flex justify-content-center mt-5 pt-5 ">
+        <form class="bg-dark p-5" style="border-radius: 15px;" method="POST" action="ceklogin.php">
             <div class="alert alert-danger" role="alert" id="alert" style="display: none"></div>
             <div class="alert alert-success" role="alert" id="alertok" style="display: none"></div>
-            <div id="judul" class="mt-3">ADMIN PAGE</div>
+            <div id="judul" class="text-center text-white"><h3>LOGIN PAGE</h3></div>
             <hr/>
             <div class="mb-4">
                 <label for="username" class="form-label text-warning">Username</label>
