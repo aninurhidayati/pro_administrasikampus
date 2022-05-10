@@ -20,8 +20,8 @@ require_once("../config/config.php");
             background-color: gray;
         }
     </style>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #007da5"> 
+        <div class="container-fluid" style="color: lightgray;">
             <a class="navbar-brand" href="#">Admin</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

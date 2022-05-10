@@ -14,23 +14,22 @@ require_once("config/config.php");
     <link rel="stylesheet" href="assets/bootstrap/style.css" />
 </head>
 
-<body>
+<body style="background-image: url('assets/img_bg/1.jpg'); background-size: 1366px 768px;" >
     <div class="container d-flex justify-content-center mt-5 pt-5">
-        <form class="bg-light p-5" method="POST" action="ceklogin.php">
+        <form class="bg-dark p-5" method="POST" action="ceklogin.php">
             <div class="alert alert-danger" role="alert" id="alert" style="display: none"></div>
             <div class="alert alert-success" role="alert" id="alertok" style="display: none"></div>
             <div id="judul" class="mt-3">ADMIN PAGE</div>
-            <hr />
+            <hr/>
             <div class="mb-4">
-                <label for="username" class="form-label">Username</label>
+                <label for="username" class="form-label text-warning">Username</label>
                 <input type="text" name="username" class="form-control" id="username" />
             </div>
             <div class="mb-4">
-                <label for="password" class="form-label">Password</label>
+                <label for="password" class="form-label text-warning">Password</label>
                 <input type="password" name="password" class="form-control" id="password" />
             </div>
             <button type="submit" class="btn btn-primary" name="btnlogin">Login</button>
-            <a href="../">KEMBALI</a>
         </form>
     </div>
     <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
