@@ -186,8 +186,8 @@ if (!isset($_GET['act'])) {
                             <div class="col-md-2"></div>
                             <div class="col-md-10">
                                 <a href="?modul=mod_mahasiswa" type="cancel" class="btn btn-secondary"><i class="bi bi-box-arrow-left"></i> Kembali</a>
-                                <button type="cancel" class="btn btn-danger"><i class="bi bi-x-square"></i>Reset</button>
-                                <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i>Simpan</button>
+                                <button type="cancel" class="btn btn-danger"><i class="bi bi-x-square"></i>Reset </button>
+                                <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i>Simpan </button>
                             </div>
                         </div>
                     </form>
