@@ -11,7 +11,7 @@ require_once("../config/config.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <title>Home</title>
+    <title>Home | Administrasi Kampus</title>
 </head>
 
 <body>
@@ -22,24 +22,21 @@ require_once("../config/config.php");
     </style>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #007da5;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Administrasi Kampus</a>
+            <img src="../assets/img_bg/logo.jpg" width="50px" alt="">
+            <a class="navbar-brand me-auto ps-3" href="#">Administrasi Kampus</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div class="d-flex">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-door-fill"></i> Home</a>
+                        <a class="nav-link active" aria-current="page" href="../admin/"><i class="bi bi-house-door-fill"></i> Home</a>
                     </li>
-                </ul>
-            </div>
-            <div class="d-flex">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="../"><i class="bi bi-power"></i> Log Out</a>
                     </li>
                 </ul>
-      </div>
+            </div>
         </div>
     </nav>
     <div class="container-fluid mt-2">
